@@ -12,7 +12,7 @@ on:
       - main 
     
 jobs:
-  ci_part:
+    ci_part:
       runs-on: ubuntu-latest
       
       steps:

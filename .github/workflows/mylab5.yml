@@ -1,26 +1,27 @@
 name: CI-CD-Pipeline
+
+on:
+  push:
+    branches: 
+        - main 
 env:
   EB_PACKAGE_S3_BUCKET_NAME : "lab4-install-packages"
   EB_APPLICATION_NAME       : "MyLab4"
   EB_ENVIRONMENT_NAME       : "MyLab4-env"
   DEPLOY_PACKAGE_NAME       : "lab4_app_${{ github.sha }}.zip"
   AWS_REGION_NAME           : "us-east-2"
-
-on:
-  push:
-    branches: 
-        - main  
     
 jobs:
+  #_______________________________________________
   my_ci_part:
       runs-on: ubuntu-latest
       
       steps:
-      - name: Git clone repo
-        uses: actions/checkout@v1
+        - name: Git clone repo
+          uses: actions/checkout@v1
             
-      - name: Create ZIP deployment package
-        run: ${{ env.DEPLOY_PACKAGE_NAME }}
+        - name: Create ZIP deployment package
+          run: ${{ env.DEPLOY_PACKAGE_NAME }}
 #         run : zip -r ${{ env.DEPLOY_PACKAGE_NAME }}  ./ -x *.git*       
       
 #       - name: Configure AWS Credentials

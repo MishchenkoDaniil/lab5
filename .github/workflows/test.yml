@@ -1,0 +1,22 @@
+name: CI-CD #відкорегуй
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  HELLO:        "12345" #відкорегуй
+
+
+jobs:
+  #______________________________________________________________________________________________________________________
+  dev_deploy:
+    name: Stockclubs Build and Deploy - Dev
+    runs-on: ubuntu-latest 
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+ 
+      - name: Create New Service
+        run: mkdir ${{ env.HEELO }}

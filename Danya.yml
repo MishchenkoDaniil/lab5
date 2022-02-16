@@ -1,0 +1,22 @@
+name: name #відкорегуй
+
+on:
+  push:
+    branches:
+      - dev #відкорегуй
+
+env:
+  API_ECR_REPOSITORY:        "stockclubs-api" #відкорегуй
+
+
+jobs:
+  #______________________________________________________________________________________________________________________
+  dev_deploy:
+    name: Stockclubs Build and Deploy - Dev
+    runs-on: ubuntuuuuu #відкорегуй
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+ 
+      - name: Create New Service
+        run: mkdor встав свій енв#відкорегуй

@@ -9,10 +9,10 @@ env:
 on:
   push:
     branches: 
-      - main 
+        - main 
     
 jobs:
-    my_ci_part:
+  my_ci_part:
       runs-on: ubuntu-latest
       
       steps:

@@ -2,7 +2,7 @@ name: CI-CD-Pipeline
 env:
   EB_PACKAGE_S3_BUCKET_NAME : "lab4-install-packages"
   EB_APPLICATION_NAME       : "MyLab4"
-  EB_ENVIROMENT_NAME        : "MyLab4-env"
+  EB_ENVIRONMENT_NAME        : "MyLab4-env"
   DEPLOY_PACKAGE_NAME       : "lab4_app_${{ github.sha }}.zip"
   AWS_REGION_NAME           : "us-east-2"
 

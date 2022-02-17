@@ -59,7 +59,7 @@ jobs:
           run : aws elasticbeanstalk update-environment --environment-name ${{ env.EB_ENVIRONMENT_NAME }} --version-label "Ver-${{ github.sha }}"
 
         - name: finish
-          run : echo "SUCCESSFULLY!!!"
+          run : echo "SUCCESSFULL!!!"
 
     
 
